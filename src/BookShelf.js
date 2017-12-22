@@ -1,6 +1,7 @@
 import React from 'react'
 import sortBy from 'sort-by'
 import Book from './Book'
+import PropTypes from 'prop-types'
 
 const BookShelf= React.createClass({
 
@@ -58,5 +59,10 @@ const BookShelf= React.createClass({
 	}
 
 });
+
+BookShelf.propTypes={
+  onUpdate: PropTypes.func,
+  books: PropTypes.array
+}
 
 export default BookShelf
