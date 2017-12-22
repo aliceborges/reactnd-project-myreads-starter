@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
+import React from 'react'
 
-class Book extends Component{
+const Book= React.createClass({
 
 	render(){
 
@@ -27,6 +27,6 @@ class Book extends Component{
 			</li>
 		)
 	}
-}
+});
 
 export default Book
