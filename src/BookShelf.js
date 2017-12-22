@@ -6,7 +6,7 @@ class BookShelf extends Component{
 
 	render(){
 
-		const { books }=this.props
+		const { books, onUpdate }=this.props
 
 		let currentlyReading
 		currentlyReading=books.filter((book)=> book.shelf==='currentlyReading')
@@ -47,7 +47,7 @@ class BookShelf extends Component{
                       <ol className="books-grid">
                         { category.field.map((book)=> (
                           <Book 
-                            onUpdate={this.props.onUpdate}
+                            onUpdate={onUpdate}
                             book={book}
                           />
                         )) }
