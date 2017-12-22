@@ -25,6 +25,16 @@ class BooksApp extends React.Component {
     })
   }
 
+  onUpdate = (book, shelf) => {
+    BooksAPI.update(book, shelf)
+    .then(res => {
+      return BooksAPI.getAll();
+     })
+     .then( books => {
+       this.setState({books: books});
+     });
+  }
+
   render() {
     return (
       <div className="app">
@@ -45,7 +55,10 @@ class BooksApp extends React.Component {
           <div className="list-books-title">
             <h1>MyReads</h1>
           </div>
-          <BookShelf books={this.state.books} />
+          <BookShelf 
+            books={this.state.books} 
+            onUpdate={this.onUpdate}
+          />
           <div className="open-search">
             <a onClick={()=> this.setState({ showSearchPage: true })}>Add a book</a>
           </div>

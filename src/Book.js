@@ -1,10 +1,10 @@
 import React, {Component} from 'react'
 
 class Book extends Component{
-	
+
 	render(){
 
-		const { book }=this.props
+		const { book, onUpdate }=this.props
 
 		return(
 			<li key={book.id}>
@@ -12,12 +12,12 @@ class Book extends Component{
 			    <div className="book-top">
 			      <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: 'url('+ book.imageLinks.smallThumbnail +')' }}></div>
 			      <div className="book-shelf-changer">
-			        <select>
+			        <select defaultValue={book.shelf} onChange={(event) => {onUpdate(book, event.target.value)}}>
 			          <option value="none" disabled>Move to...</option>
 			          <option value="currentlyReading">Currently Reading</option>
 			          <option value="wantToRead">Want to Read</option>
 			          <option value="read">Read</option>
-			          <option value="none">None</option>
+			          <option>None</option>
 			        </select>
 			      </div>
 			    </div>

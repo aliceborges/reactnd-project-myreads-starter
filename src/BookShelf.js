@@ -47,6 +47,7 @@ class BookShelf extends Component{
                       <ol className="books-grid">
                         { category.field.map((book)=> (
                           <Book 
+                            onUpdate={this.props.onUpdate}
                             book={book}
                           />
                         )) }
