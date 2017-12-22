@@ -18,10 +18,6 @@ class Search extends Component{
 	}
 
 	render(){
-
-
-		//const { onUpdate }=this.props
-
 		return(
 			<div className="search-books">
 			  <div className="search-books-bar">
