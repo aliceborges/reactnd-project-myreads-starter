@@ -12,6 +12,9 @@ class Search extends Component{
 	}
 
 	updateQuery = (query) => {
+
+		const { existingShelf } = this.props
+
 		if(!query){
 			this.setState({query:'', books:[]})
 		}
@@ -22,7 +25,8 @@ class Search extends Component{
 					this.setState({books:[]})
 				}
 				else{
-		    this.setState({books})
+					books.map(book => (existingShelf.filter((b) => b.id === book.id).map(b => book.shelf = b.shelf)))
+		   		this.setState({books})
 		  	}
 		  })
 		}
