@@ -1,25 +1,22 @@
-import React, {Component} from 'react'
+import React from 'react'
 import sortBy from 'sort-by'
 import Book from './Book'
 
-class BookShelf extends Component{
+const BookShelf= React.createClass({
 
 	render(){
 
 		const { books, onUpdate }=this.props
 
 		let currentlyReading
-		currentlyReading=books.filter((book)=> book.shelf==='currentlyReading')
-    currentlyReading.sort(sortBy('title'))
+		currentlyReading=books.filter((book)=> book.shelf==='currentlyReading').sort(sortBy('title'))
 
 
 		let wantToRead
-		wantToRead=books.filter((book)=> book.shelf==='wantToRead')
-    wantToRead.sort(sortBy('title'))
+		wantToRead=books.filter((book)=> book.shelf==='wantToRead').sort(sortBy('title'))
 
 		let read
-		read=books.filter((book)=> book.shelf==='read')
-    read.sort(sortBy('title'))
+		read=books.filter((book)=> book.shelf==='read').sort(sortBy('title'))
 
     let categories
     categories=[
@@ -61,6 +58,6 @@ class BookShelf extends Component{
 	)
 	}
 
-}
+});
 
 export default BookShelf
