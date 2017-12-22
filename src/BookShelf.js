@@ -11,7 +11,6 @@ const BookShelf= React.createClass({
 		let currentlyReading
 		currentlyReading=books.filter((book)=> book.shelf==='currentlyReading').sort(sortBy('title'))
 
-
 		let wantToRead
 		wantToRead=books.filter((book)=> book.shelf==='wantToRead').sort(sortBy('title'))
 
