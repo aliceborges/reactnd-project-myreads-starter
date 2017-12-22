@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const Book= React.createClass({
 
@@ -28,5 +29,9 @@ const Book= React.createClass({
 		)
 	}
 });
+
+Book.propTypes={
+	onUpdate: PropTypes.func
+}
 
 export default Book
