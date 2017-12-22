@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import sortBy from 'sort-by'
 
-class ListBooks extends Component{
+class BookShelf extends Component{
 
 	render(){
 
@@ -75,4 +75,4 @@ class ListBooks extends Component{
 
 }
 
-export default ListBooks
+export default BookShelf
