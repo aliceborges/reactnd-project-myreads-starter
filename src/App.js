@@ -42,7 +42,7 @@ class BooksApp extends React.Component {
               <h1>MyReads</h1>
             </div>
             <BookShelf 
-              key={books}
+              key={this.state.books}
               books={this.state.books} 
               onUpdate={this.onUpdate}
             />
