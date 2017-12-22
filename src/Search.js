@@ -19,6 +19,7 @@ class Search extends Component{
 
 	render(){
 
+
 		//const { onUpdate }=this.props
 
 		return(
@@ -37,6 +38,7 @@ class Search extends Component{
 			    <ol className="books-grid">
 				    {this.state.books.map((book)=>(
 				    	<Book
+				    		key={book.id}
 				    		onUpdate={this.props.onUpdate}
 				    		book={book}
 				    	/>
