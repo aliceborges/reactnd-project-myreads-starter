@@ -39,7 +39,7 @@ class Search extends Component{
 			  <div className="search-books-bar">
 			    <Link className="close-search" to='/'>Close</Link>
 			    <div className="search-books-input-wrapper">
-			    	<Debounce time="10" handler="onChange">
+			    	<Debounce time="400" handler="onChange">
 				      <input 
 				      	type="text" 
 				      	placeholder="Search by title or author"
